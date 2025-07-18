@@ -17,7 +17,7 @@ COPY composer.json composer.lock ./
 
 RUN composer install --no-dev --optimize-autoloader
 
-# COPY . /var/www/html
+COPY . /var/www/html
 
 RUN a2enmod rewrite
 
